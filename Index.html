@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 | EcoSolo Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo">EcoSolo Agrinho</div>
+        <nav>
+            <button class="nav-btn active" onclick="switchPage('agrinho')">O Agrinho</button>
+            <button class="nav-btn" onclick="switchPage('simulador')">Simulador de Solo</button>
+            <button class="nav-btn" onclick="switchPage('sobre-mim')">Sobre Mim</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="agrinho" class="page active">
+            <h2>O Agrinho e a Agricultura Sustentável</h2>
+            <p>O <strong>Programa Agrinho 2026</strong> nos desafia a encontrar soluções inovadoras para o campo. Este projeto nasce com o objetivo de espalhar o conceito da <strong>Adubação Verde</strong> e da <strong>Rotação de Culturas</strong>, práticas vitais para a conservação do nosso solo.</p>
+            
+            <p>Em vez de saturar a terra com fertilizantes químicos sintéticos, a adubação verde utiliza plantas (como as leguminosas) que se associam a bactérias naturais para fixar o nitrogênio do ar diretamente na terra. Isso melhora a estrutura do solo, protege contra a erosão e quebra o ciclo de pragas.</p>
+
+            <blockquote>
+                "Cuidar do solo é garantir o alimento de amanhã. A sustentabilidade na agricultura familiar protege a biodiversidade e gera economia real para o produtor rural."
+            </blockquote>
+        </section>
+
+        <section id="simulador" class="page">
+            <h2>Simulador de Adubação Verde & Economia</h2>
+            <p>Descubra qual a melhor planta companheira para a sua entressafra, quanto nitrogênio natural ela pode injetar na terra e a economia estimada em fertilizantes químicos.</p>
+            
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="area">Tamanho da sua Área de Plantio (em Hectares):</label>
+                    <input type="number" id="area" placeholder="Ex: 10" min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cultura">Qual é a sua Cultura Principal?</label>
+                    <select id="cultura">
+                        <option value="crotalaria">Milho (Recomendado: Crotalária-spectabilis)</option>
+                        <option value="guandu">Soja (Recomendado: Feijão-Guandu)</option>
+                        <option value="ervilhaca">Trigo ou Aveia (Recomendado: Ervilhaca-comum)</option>
+                    </select>
+                </div>
+
+                <button class="action-btn" onclick="calcularSolo()">Simular Benefícios Ecológicos</button>
+            </div>
+
+            <div id="resultado" class="result-box hidden">
+                </div>
+        </section>
+
+        <section id="sobre-mim" class="page">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Seja muito bem-vindo ao meu projeto para o Concurso Agrinho 2026.</p>
+            <p>Sou um estudante apaixonado por tecnologia e pelo meio ambiente. Desenvolvi este site para demonstrar como a programação e a ciência agrícola podem andar de mãos dadas. Acredito fortemente que o futuro da agricultura depende de soluções biológicas e inteligentes, reduzindo nossa dependência de insumos químicos pesados e valorizando o trabalho do produtor rural.</p>
+            <hr>
+            <h3>Foco do Meu Projeto:</h3>
+            <ul>
+                <li>Preservação e saúde microbiológica dos solos.</li>
+                <li>Inovação digital aplicada à agricultura familiar.</li>
+                <li>Disseminação das metas de Desenvolvimento Sustentável (ODS).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Projeto Desenvolvido para o Concurso Agrinho. Protegendo nossos solos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
